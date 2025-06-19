@@ -1,5 +1,7 @@
+import React from 'react'
 import { motion } from 'framer-motion'
 import { FaInstagram, FaYoutube, FaLinkedin, FaTwitter, FaEnvelope, FaLock } from 'react-icons/fa'
+import './Connect.css'
 
 export default function Connect() {
   const socialLinks = [
@@ -12,20 +14,21 @@ export default function Connect() {
 
   return (
     <motion.section 
-      className="bg-dark-blue bg-opacity-80 py-8 mt-20"
+      className="connect-section"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="container mx-auto">
-        <div className="flex items-center justify-center mb-6">
-          <FaLock className="text-gold text-2xl mr-2" />
-          <h2 className="font-heading text-3xl font-bold text-center text-gold">Connect With Me</h2>
+      <div className="connect-container">
+        <div className="connect-header">
+          <FaLock className="connect-lock-icon" />
+          <h2 className="connect-title">Connect With Me</h2>
         </div>
-        <ul className="flex justify-center items-center gap-6 md:gap-8">
+        <ul className="connect-links">
           {socialLinks.map((link, index) => (
             <motion.li 
               key={link.name}
+              className="connect-link-item"
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
@@ -34,14 +37,12 @@ export default function Connect() {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group"
+                className="connect-link"
               >
-                <div className="relative">
-                  <div className="text-3xl text-gold group-hover:text-text-gold transition-colors duration-300">
-                    <link.icon />
-                  </div>
+                <div className="connect-icon-wrapper">
+                  <link.icon className="connect-icon" />
                   <motion.div 
-                    className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gold text-dark-blue px-2 py-1 rounded text-xs whitespace-nowrap"
+                    className="connect-tooltip"
                     initial={{ opacity: 0, y: 10 }}
                     whileHover={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.2 }}
@@ -57,4 +58,3 @@ export default function Connect() {
     </motion.section>
   )
 }
-

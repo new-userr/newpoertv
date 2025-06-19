@@ -1,5 +1,6 @@
+import React, { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { useRef } from 'react'
+import './About.css'
 
 export default function About() {
   const ref = useRef(null)
@@ -14,16 +15,15 @@ export default function About() {
   return (
     <motion.section 
       ref={ref}
-      className="mb-20 py-20"
+      className="about-section"
       style={{ opacity, scale }}
     >
-      <h2 className="font-heading text-4xl md:text-5xl font-bold mb-8 text-center text-gold">About Me</h2>
-      <div className="bg-gold bg-opacity-5 p-8 rounded-lg shadow-lg backdrop-blur-sm">
-        <p className="text-lg md:text-xl thin-italic text-text-gold tracking-wide leading-relaxed">
+      <h2 className="about-title">About Me</h2>
+      <div className="about-content">
+        <p className="about-text">
           I'm Vidhant Gurav (Light)—a visionary video editor turning ideas into jaw-dropping visuals. With two years of experience, I fuse cinematic flair with cutting-edge effects to create content that demands attention and leaves a lasting impact. For me, every frame is an opportunity to redefine storytelling and push creative boundaries. Let's make magic together.
         </p>
       </div>
     </motion.section>
   )
 }
-
