@@ -120,3 +120,64 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Custom styles for the portfolio */
+.thin-italic {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.glow-effect {
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.glow-effect:hover {
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+}
+
+.portfolio-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+}
+
+/* Line clamp utilities */
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000305;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFD700;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FFE55C;
+}
