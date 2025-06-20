@@ -6,6 +6,22 @@ import './Header.css'
 export default function Header() {
   return (
     <header className="header">
+      <video
+        className="header-video"
+        autoPlay
+        muted
+        loop
+        playsInline
+      >
+        <source
+          src="https://videos.pexels.com/video-files/3571264/3571264-uhd_2560_1440_30fps.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+      
+      <div className="header-overlay"></div>
+      
       <div className="header-content">
         <motion.h1 
           className="header-title"
